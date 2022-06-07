@@ -1,3 +1,4 @@
+
 <form method="POST" action=''>
   <div class="form-group row">
     <label for="Prenom" class="col-sm-2 col-form-label">Prenom</label>
@@ -50,6 +51,7 @@
     </div>
   </div>
 </form>
+
 <?php
 if(isset($_POST['submit'])){
   if (empty($_POST['name'])){?>
@@ -78,13 +80,16 @@ if(isset($_POST['submit'])){
 </div><?php
   }
   else {
-    ?><div class="alert alert-success" role="alert">
-  Les donnees ont bien etait enregistrees
-  </div>
-    <?php
-    $_SESSION['user']=$_POST;
-    var_dump($_SESSION['user']) ;
+  $_SESSION['user']=$_POST;
+$info= [
+ 'name'=> htmlspecialchars( $_SESSION['user']['name']),
+ 'last-name' =>htmlspecialchars( $_SESSION['user']['last-name']),
+ 'age'=>htmlspecialchars( $_SESSION['user']['age']),
+ 'size'=>htmlspecialchars( $_SESSION['user']['size']),
+ 'status'=>htmlspecialchars( $_SESSION['user']['status'])
+
+];
 }
-
-
+session_destroy();
 }?>
+
