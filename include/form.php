@@ -44,7 +44,6 @@
   </fieldset>
   </div>  
 </form>
-
 <div class="row d-flex justify-content-center w-100">
   <?php
 if(isset($_POST['submit'])){
@@ -78,8 +77,13 @@ if(isset($_POST['submit'])){
   Les donnees ont bien etait enregistrees
   </div>
     <?php
-    $_SESSION['user']= $_POST;
-    var_dump($_SESSION['user'])
+    $info= 
+    [ 'name'=> htmlspecialchars( $_SESSION['user']['name']),  
+    'last-name' =>htmlspecialchars( $_SESSION['user']['last-name']),  
+    'age'=>htmlspecialchars( $_SESSION['user']['age']),  
+    'size'=>htmlspecialchars( $_SESSION['user']['size']),  
+    'status'=>htmlspecialchars( $_SESSION['user']['status'])  
+  ];
     ;
 }
 
