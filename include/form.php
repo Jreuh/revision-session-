@@ -79,9 +79,11 @@ if(isset($_POST['submit'])){
   </div>
     <?php
     $_SESSION['user']= $_POST;
-    var_dump($_SESSION['user']);
-    $_SESSION['user']=$_POST; $info= [  'name'=> htmlspecialchars( $_SESSION['user']['name']),  'last-name' =>htmlspecialchars( $_SESSION['user']['last-name']),  'age'=>htmlspecialchars( $_SESSION['user']['age']),  'size'=>htmlspecialchars( $_SESSION['user']['size']),  'status'=>htmlspecialchars( $_SESSION['user']['status'])  ];
-   
+    var_dump($_SESSION['user']);    $info= [  'name'=> htmlspecialchars( $_SESSION['user']['name']),
+    'last-name' =>htmlspecialchars( $_SESSION['user']['last-name']),
+    'age'=>htmlspecialchars( $_SESSION['user']['age']), 
+    'size'=>htmlspecialchars( $_SESSION['user']['size']),
+    'status'=>htmlspecialchars( $_SESSION['user']['status'])  ];
 }
 
 }?>
