@@ -6,7 +6,6 @@ include 'include/jumbotron.php';
 include 'include/button.php';
 
 
-
 ?>
 
 <?php
