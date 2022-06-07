@@ -13,6 +13,6 @@
         include 'include/form.php';
       } else {
       ?> <a href="?data"><button type="button" a class="btn btn-primary "> Ajouter des donnees</button></a><?php
-      } ?></div>
+      } include 'include/function.php';?></div>
   </div>
 </div>

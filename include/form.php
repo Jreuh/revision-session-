@@ -77,12 +77,13 @@ if(isset($_POST['submit'])){
   Les donnees ont bien etait enregistrees
   </div>
     <?php
-    $info= 
-    [ 'name'=> htmlspecialchars( $_SESSION['user']['name']),  
-    'last-name' =>htmlspecialchars( $_SESSION['user']['last-name']),  
-    'age'=>htmlspecialchars( $_SESSION['user']['age']),  
-    'size'=>htmlspecialchars( $_SESSION['user']['size']),  
-    'status'=>htmlspecialchars( $_SESSION['user']['status'])  
+    $_SESSION['user'] = $_POST;
+    $info =
+     ['name'=> htmlspecialchars( $_SESSION['user']['name']),  
+      'last-name' =>htmlspecialchars( $_SESSION['user']['last-name']),  
+      'age'=>htmlspecialchars( $_SESSION['user']['age']),  
+      'size'=>htmlspecialchars( $_SESSION['user']['size']),  
+      'status'=>htmlspecialchars( $_SESSION['user']['status'])  
   ];
     ;
 }
