@@ -42,9 +42,9 @@
     </div>
     <button type="submit" class="btn btn-primary" name="submit">Soummettre</button>
   </fieldset>
-  </div>
-      
+  </div>  
 </form>
+
 <div class="row d-flex justify-content-center w-100">
   <?php
 if(isset($_POST['submit'])){
@@ -79,7 +79,8 @@ if(isset($_POST['submit'])){
   </div>
     <?php
     $_SESSION['user']= $_POST;
-    var_dump($_SESSION['user']) ;
+    var_dump($_SESSION['user'])
+    ;
 }
 
 }?>
